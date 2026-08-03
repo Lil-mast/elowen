@@ -4,6 +4,8 @@ date: 2026-07-25
 tags:
   - reflection
   - garden
+  - plant/elowen
+  - concept/convergence
 ---
 
 *(Or: What a Plant Taught Me About Staying Alive)*

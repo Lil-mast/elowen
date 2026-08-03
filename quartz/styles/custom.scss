@@ -1,3 +1,26 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  transform-origin: left;
+  transform: scaleX(0);
+  background: linear-gradient(to right, #5c7a4f, #8bc34a);
+  z-index: 9999;
+  animation: grow-progress auto linear;
+  animation-timeline: scroll(root);
+}
+
+@keyframes grow-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
