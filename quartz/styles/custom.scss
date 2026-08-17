@@ -50,8 +50,24 @@ body {
   }
 }
 
+// Mobile: keep the frame visible. Size it up so edge flowers still read on
+// a narrow screen, ease the column wash, and drop fixed attachment (flaky on iOS).
 @media (max-width: 999px) {
   body {
-    background-image: none;
+    background-size: 160vw auto;
+    background-position: center top;
+    background-attachment: scroll;
+  }
+
+  .page > #quartz-body {
+    & .page-header,
+    & .center {
+      background-color: color-mix(in srgb, var(--light) 82%, transparent);
+    }
+
+    & .sidebar.left,
+    & .sidebar.right {
+      background-color: color-mix(in srgb, var(--light) 40%, transparent);
+    }
   }
 }
