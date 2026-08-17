@@ -24,3 +24,34 @@ body::before {
     transform: scaleX(1);
   }
 }
+
+// Botanical frame on the body — large enough to read as a border, not a
+// tiny centered stamp. No full-.page wash: that hid the image entirely.
+body {
+  background-image: url("/static/fern.png");
+  background-size: 92vw auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.page > #quartz-body {
+  // Readable column + header only. Sidebars stay clear so edge foliage shows.
+  & .page-header,
+  & .center {
+    background-color: color-mix(in srgb, var(--light) 94%, transparent);
+  }
+
+  // Very light tint on sticky chrome — enough for icon contrast, not enough
+  // to wash out the frame in the side margins.
+  & .sidebar.left,
+  & .sidebar.right {
+    background-color: color-mix(in srgb, var(--light) 55%, transparent);
+  }
+}
+
+@media (max-width: 999px) {
+  body {
+    background-image: none;
+  }
+}
