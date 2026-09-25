@@ -7,7 +7,7 @@ tags:
   - garden
   - plant/strawberry
   - concept/pull-request
-draft: true
+draft: false
 ---
 
 *(Or: Why Nobody Grows Alone in a Sealed Room)*
